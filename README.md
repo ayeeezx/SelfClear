@@ -5,7 +5,7 @@ O sistema é controlado via terminal (painel .BAT), proporcionando uma interface
 
 ## Aviso Importante
 O uso de selfbots viola os Termos de Serviço do Discord e pode resultar em banimento da conta. 
-Este código deve ser utilizado somente para fins educacionais e de estudo.
+**Total responsabilidade e risco de quem for usar**
 
 ## Funcionalidades
 - Exclusão automatizada de mensagens enviadas pelo usuário em um canal específico.
