@@ -1,54 +1,50 @@
 # Limpador de Mensagens do Discord
 
-Este projeto é uma ferramenta em **Node.js** para deletar mensagens enviadas por um usuário específico em um canal do Discord.  
-O script utiliza a biblioteca **discord.js-selfbot-v13** e deve ser usado com cautela, pois **selfbots violam os Termos de Serviço do Discord**.
+Este projeto é uma ferramenta em Node.js para remover mensagens enviadas por sua própria conta no Discord de forma rápida e organizada. 
+O sistema é controlado via terminal (painel .BAT), proporcionando uma interface simples e direta para o usuário.
 
 ## Aviso Importante
-O uso de selfbots pode resultar no **banimento permanente** da sua conta do Discord.  
-Este projeto é para fins **educacionais** e **não é recomendado** para uso em contas principais.
+O uso de selfbots viola os Termos de Serviço do Discord e pode resultar em banimento da conta. 
+Este código deve ser utilizado somente para fins educacionais e de estudo.
+
+## Funcionalidades
+- Exclusão automatizada de mensagens enviadas pelo usuário em um canal específico.
+- Operação em lotes para maior velocidade e segurança contra bloqueios.
+- Verificação automática do token antes da execução.
+- Interface simples via arquivo `.bat`.
 
 ## Requisitos
+Para utilizar este projeto, é necessário ter instalado:
+- **Node.js** (versão recomendada: 18 ou superior)  
+  [Download do Node.js](https://nodejs.org/)
+- **NPM** (já incluso na instalação do Node.js)
+- **Biblioteca** `discord.js-selfbot-v13`  
+  Para instalar, execute no terminal:
+  ```bash
+  npm install discord.js-selfbot-v13
+  ```
 
-- **Node.js** instalado ([Download Node.js](https://nodejs.org/))
-- **npm** instalado (já incluso no Node.js)
-- Conta no Discord (token necessário)
-- Ativar **Modo Desenvolvedor** no Discord para obter IDs de canais
-
-## Instalação
-
-1. Clone este repositório ou baixe os arquivos.
-2. Instale as dependências:
-   ```bash
-   npm install discord.js-selfbot-v13
-   ```
-3. Abra o arquivo `index.js` e insira seu token na variável:
+## Como Usar
+1. Clone ou baixe este repositório.
+2. Coloque o arquivo `index.js` e o arquivo `.bat` na mesma pasta.
+3. Abra o arquivo `index.js` e cole seu token na variável `TOKEN`:
    ```javascript
    const TOKEN = 'SEU_TOKEN_AQUI';
    ```
-
-## Uso
-
-1. No Discord, ative o **Modo Desenvolvedor** nas configurações.
-2. Copie o ID do canal que deseja limpar.
-3. Execute o script através do arquivo `.bat`:
-   ```bash
-   limpador.bat
-   ```
-4. Digite o ID do canal quando solicitado e aguarde a conclusão.
-
-## Estrutura dos Arquivos
-
-- **index.js** → Código principal em Node.js que executa a limpeza.
-- **limpador.bat** → Interface no terminal para executar o script facilmente.
-- **README.md** → Este guia.
+4. Execute o arquivo `.bat`.
+5. Insira o ID do canal do Discord onde deseja apagar suas mensagens.
 
 ## Observações
+- O script só apaga mensagens enviadas pela conta que forneceu o token.
+- Certifique-se de ativar o **Modo Desenvolvedor** no Discord para conseguir copiar o ID dos canais.
 
-- Somente mensagens **enviadas por você** serão deletadas.
-- Mensagens de sistema não serão apagadas.
-- O script respeita limites de requisições do Discord para evitar bloqueios temporários.
-- Este projeto foi desenvolvido com foco educacional.
+## Estrutura do Projeto
+```
+.
+├── index.js        # Script principal em Node.js
+├── limpador.bat    # Painel em modo texto para interação
+└── README.md       # Documentação do projeto
+```
 
-## Licença
-
-Este projeto é distribuído livremente e sem garantias. O uso é de sua total responsabilidade.
+## Autor
+Projeto desenvolvido por **@ayeeezx**.
