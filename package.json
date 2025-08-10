@@ -1,0 +1,17 @@
+{
+  "name": "limpador-discord",
+  "version": "1.0.0",
+  "description": "App CLI para apagar mensagens próprias em canal/DM (selfbot)",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "build:exe": "npx nexe index.js -t windows-x64-14.15.3 -o LimpadorMensagens.exe"
+  },
+  "dependencies": {
+    "discord.js-selfbot-v13": "^2.15.1"
+  },
+  "devDependencies": {
+    "nexe": "3.3.7"
+  }
+}
